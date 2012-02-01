@@ -28,7 +28,7 @@ def create_team(team_name,permission,repo_name):
 	reqq = 'orgs/%s/teams' % org_name
 	url = host + reqq
 	try:
-		r = requests.post(url,auth = (owner_log,owner_pass),data = '{"name":"%s", "repo_names":"%s", "permission":"%s"}' % (team_name,repo_name,permission))
+		r = requests.post(url,auth = (owner_log,owner_pass),data = '{"name":"%s", "repo_names":["%s/%s"], "permission":"%s"}' % (team_name,org_name,repo_name,permission))
 	except r.status_code != 200 or r.status_code != 204:
 		return "Error "+ r.headers['status']
 	else:
