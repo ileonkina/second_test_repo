@@ -1,3 +1,4 @@
-Test files.
-pythonlib.py is just a temporary new file fith one function
-~~~~~
+pythonlib include functions:
+Delete user from organization
+Add user to team
+Create team in organization (some problems with repo)
